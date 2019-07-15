@@ -9,5 +9,5 @@ Steps to Run
 ----------------------
 - Clone the repository
 - Run `npm install` from the project folder.
-- Run `node server.js` 
-- APIs are available at localhost:8080
+- Run `nodemon server.js` 
+- APIs are available at localhost:3000

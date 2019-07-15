@@ -1,0 +1,18 @@
+{
+  "name": "mbta-backend",
+  "version": "1.0.0",
+  "description": "Backend for MBTA E-Ticket",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Rao",
+  "license": "ISC",
+  "dependencies": {
+    "@secretboy/auth": "^2019.6.5",
+    "@secretboy/express_app": "^2019.6.5",
+    "bcryptjs": "^2.4.3",
+    "passport": "^0.4.0"
+  }
+}

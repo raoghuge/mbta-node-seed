@@ -4,14 +4,17 @@ async function readJson(file) {
     return new Promise((resolve, reject) => {
         try {
             let fileName = `./config/data/${file}.data.json`;
-            console.log(fileName);
 
             fs.readFile(fileName, 'utf8', (err, jsonString) => {
                 if (err) {
-                    console.log("File read failed:", err)
                     reject(err)
                 }
-                resolve(JSON.parse(jsonString))
+                if(jsonString){
+                    resolve(JSON.parse(jsonString))
+                }else{
+                    resolve([]);
+                }
+                
             })
         } catch (error) {
             reject(error)
@@ -26,7 +29,6 @@ async function saveToJson(file, data) {
             let fileName = `./config/data/${file}.data.json`;
             fs.readFile(fileName, 'utf8', (err, jsonString) => {
                 if (err) {
-                    console.log("File read failed:", err)
                     reject(err)
                 }
                 jsonString = JSON.parse(jsonString);
